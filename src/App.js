@@ -18,7 +18,7 @@ const App = () => {
       <Services />
       <Work />
       <Contact />
-      {/* <div className='h-[100%]'></div> */}
+      {/* <div className='h-[110%]'></div> */}
     </div>
   );
 };
