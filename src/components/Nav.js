@@ -58,6 +58,7 @@ const Nav = () => {
           >
             <BsChatSquareText />
           </Link>
+
         </div>
       </div>
     </nav>
