@@ -6,7 +6,7 @@ import { fadeIn } from '../variants';
 
 const Contact = () => {
   return (
-    <section className='pt-16 pb-96 lg:section' id='contact'>
+    <section className='section' id='contact'>
       <div className="container mx-auto">
         <div className='flex flex-col lg:flex-row'>
           {/* text */}
@@ -18,9 +18,9 @@ const Contact = () => {
             className='flex-1 flex justify-start items-center'
           >
             <div>
-              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
+              <h2 className='h2 leading-tight uppercase text-[#F26C42] font-medium mb-2 tracking-wide'>
                 Get in touch
-              </h4>
+              </h2>
               <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
                 Let's Work <br /> together!
               </h2>
@@ -33,20 +33,20 @@ const Contact = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'
+            className='flex-1 border border-white rounded-2xl flex flex-col gap-y-6 p-6 items-start'
           >
             <input
-              className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
+              className=' border-black border-b py-3 px-6 rounded-full outline-none w-full placeholder:text-white focus:border-[#ffffff] transition-all placeholder-con'
               type="text"
               placeholder='Your name'
             />
             <input
-              className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
+              className=' border-black border-b py-3 px-6 rounded-full outline-none w-full placeholder:text-white focus:border-[#ffffff] transition-all placeholder-con'
               type="text"
               placeholder='Your email'
             />
             <textarea
-              className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
+              className=' border-black border-b py-12 px-6 rounded-3xl outline-none w-full placeholder:text-white focus:border-[#ffffff] transition-all resize-none placeholder-con'
               type="text"
               placeholder='Your message'
             />

@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 // image 
-import Image from '../assets/avatar.svg';
+import Image from '../assets/pro.png';
 // icons 
-import { FaGithub, FaYoutube, FaDribbble } from 'react-icons/fa';
+import { FaGithubSquare, FaFacebookSquare, FaDribbble, FaLinkedin, FaLinkedinIn } from 'react-icons/fa';
 // type animation
 import { TypeAnimation } from 'react-type-animation';
 // motion 
 import { motion } from 'framer-motion'
 // variants 
 import { fadeIn } from '../variants';
+
+
 
 const Banner = () => {
   return (
@@ -23,11 +26,13 @@ const Banner = () => {
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'
+              className='text-[55px] font-bold leading-[0.8] lg:text-[70px]'
             >
-              BEN <span>AIDEN</span>
+              NAHID PAVEL <br />
+              CHOWDHURY{/*  <span>AIDEN</span> */}
             </motion.h1>
-            <motion.div
+
+            {/* <motion.div
               variants={fadeIn('up', 0.4)}
               initial='hidden'
               whileInView={'show'}
@@ -37,11 +42,9 @@ const Banner = () => {
               <span className='text-white mr-4'>I'm a</span>
               <TypeAnimation
                 sequence={[
+                  'Software',
+                  2000,
                   'Developer',
-                  2000,
-                  'Designer',
-                  2000,
-                  'Youtuber',
                   2000,
                 ]}
                 speed={50}
@@ -49,7 +52,8 @@ const Banner = () => {
                 wrapper='span'
                 repeat={Infinity}
               />
-            </motion.div>
+            </motion.div> */}
+
             <motion.p
               variants={fadeIn('up', 0.5)}
               initial='hidden'
@@ -57,8 +61,9 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='mb-8 max-w-lg mx-auto lg:mx-0'
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos ullam cupiditate aut fugit vero iure debitis aperiam delectus voluptatibus repellendus.
+              Passionate developer with a flair for creativity and a love for creating new Ideas.
             </motion.p>
+
             <motion.div
               variants={fadeIn('up', 0.6)}
               initial='hidden'
@@ -66,7 +71,14 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'
             >
-              <button className='btn btn-lg'>Contact me</button>
+              <Link
+                to='contact'
+                smooth={true}
+                spy={true}
+                offset={0}
+              >
+                <button className='btn btn-lg'>Hire me</button>
+              </Link>
               <a href="#" className='text-gradient btn-link'>My Portfolio</a>
             </motion.div>
 
@@ -76,17 +88,18 @@ const Banner = () => {
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'
+              className='flex text-[28px] gap-x-6 max-w-max mx-auto lg:mx-0'
             >
-              <a href="#">
-                <FaYoutube />
+              <a href="https://www.facebook.com/nahidpavelc/">
+                <FaFacebookSquare />
               </a>
-              <a href="#">
-                <FaGithub />
+              <a href="https://github.com/nahidpavelc">
+                <FaGithubSquare />
               </a>
-              <a href="#">
-                <FaDribbble />
+              <a href="https://www.linkedin.com/in/nahid-pavel-ch/">
+                <FaLinkedin />
               </a>
+
             </motion.div>
           </div>
 

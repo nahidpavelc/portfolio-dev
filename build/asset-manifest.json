@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bff333d3.css",
+    "main.js": "/static/js/main.017b2784.js",
+    "static/media/about.png": "/static/media/about.f4a4adafa9ed5c982f91.png",
+    "static/media/pro.png": "/static/media/pro.4942e5ca0c15f98a09c9.png",
+    "static/media/portfolio-5 BEA.png": "/static/media/portfolio-5 BEA.c7dab954c841cf00fcf1.png",
+    "static/media/portfolio-6 HAAB.jpg": "/static/media/portfolio-6 HAAB.36bb6dc5b93ab20c5c74.jpg",
+    "static/media/portfolio-4 WE.jpg": "/static/media/portfolio-4 WE.528dd460eca9feb25d9f.jpg",
+    "static/media/portfolio-2 Focus.jpg": "/static/media/portfolio-2 Focus.088012b28e69a9ded3c3.jpg",
+    "static/media/portfolio-1 DBA.jpg": "/static/media/portfolio-1 DBA.9ba93387fd382ec4471e.jpg",
+    "static/media/bg-site.jpg": "/static/media/bg-site.98a9b924c8dbbf5d0f4b.jpg",
+    "static/media/portfolio-3 BH.jpg": "/static/media/portfolio-3 BH.be1c6a1b12f34846564d.jpg",
+    "index.html": "/index.html",
+    "static/media/nlogo.svg": "/static/media/nlogo.0f4bc2a49e769a26a14d76ae6e48fd80.svg",
+    "main.bff333d3.css.map": "/static/css/main.bff333d3.css.map",
+    "main.017b2784.js.map": "/static/js/main.017b2784.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bff333d3.css",
+    "static/js/main.017b2784.js"
+  ]
+}

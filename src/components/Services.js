@@ -1,36 +1,49 @@
 import React from 'react';
 // icon 
-import { BsArrowUpRight } from 'react-icons/bs';
+import { BsArrowUpRight, BsFillCheckSquareFill } from 'react-icons/bs';
 // motion 
 import { motion } from 'framer-motion';
 // fadeIn 
 import { fadeIn } from '../variants';
+import { Link } from 'react-scroll';
 
 // services data 
 const services = [
   {
-    name: 'UI/UX Designer',
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque sunt necessitatibus tenetur provident.",
-    link: 'Learn more',
+    name: 'Laravel'
   },
   {
-    name: 'Development',
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque sunt necessitatibus tenetur provident.",
-    link: 'Learn more',
+    name: 'React'
   },
   {
-    name: 'Digital Marketing',
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque sunt necessitatibus tenetur provident.",
-    link: 'Learn more',
+    name: 'CodeIgniter'
   },
   {
-    name: 'Product Branding',
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque sunt necessitatibus tenetur provident.",
-    link: 'Learn more',
+    name: 'Next.js'
+  },
+  {
+    name: 'Bootstrap'
+  },
+  {
+    name: 'Tailwind'
+  },
+  {
+    name: 'Node.js'
+  },
+  {
+    name: 'Express.js'
+  },
+  {
+    name: 'Firebase'
+  },
+  {
+    name: 'RestAPI'
+  },
+  {
+    name: 'MySQL'
+  },
+  {
+    name: 'MongoDB'
   },
 ]
 
@@ -38,20 +51,27 @@ const Services = () => {
   return (
     <section className='section' id='services'>
       <div className="container mx-auto">
-        <div className='flex flex-col lg:flex-row '>
+        <div className='flex flex-col lg:flex-row'>
           {/* text & image */}
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
+            className='flex-1 lg:bg-hidden lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
           >
-            <h2 className='h2 text-accent mb-6'>What I DO.</h2>
+            <h2 className='h2 text-[#F26C42] mb-6'>SKILLS</h2>
             <h3 className='h3 max-w-[455px] mb-16'>
-              I'm a Freelancer Front-end Developer with over 5 year of experience.
+              Here is my skills on that I have worked
             </h3>
-            <button className='btn btn-sm'>See my work</button>
+            <Link
+              to='work'
+              smooth={true}
+              spy={true}
+              offset={0}
+            >
+              <button className='btn btn-sm'>See my work</button>
+            </Link>
           </motion.div>
 
           {/* services */}
@@ -63,25 +83,29 @@ const Services = () => {
             className='flex-1'
           >
             {/* services list */}
-            <div>
+            <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-4'>
               {services.map((service, index) => {
                 // destructure service
                 const { name, description, link } = service;
                 return (
-                  <div className='border-b border-white/20 h-[146px] mb-[38px] flex' key={index}>
+                  <div className=' border-white/20 h-auto p-[8px] flex bg-green-900 rounded' key={index}>
+
+                    <div className='flex flex-col mr-3'>
+                      <Link
+                        to='work'
+                        smooth={true}
+                        spy={true}
+                        offset={0}
+                        className='btn w-9 h-9 flex justify-center items-center'
+                      >
+                        <BsFillCheckSquareFill />
+                      </Link>
+                      <a href="#" className='text-gradient text-sm'> {link}</a>
+                    </div>
                     <div className='max-w-[476px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>
+                      <h4 className='text-[18px] tracking-wider font-primary font-semibold '>
                         {name}
                       </h4>
-                      <p className='font-secondary leading-tight'>
-                        {description}
-                      </p>
-                    </div>
-                    <div className='flex flex-col flex-1 items-end'>
-                      <a href="#" className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
-                        <BsArrowUpRight />
-                      </a>
-                      <a href="#" className='text-gradient text-sm'> {link}</a>
                     </div>
                   </div>
                 )
@@ -90,8 +114,8 @@ const Services = () => {
           </motion.div>
 
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 };
 

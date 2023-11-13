@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 // countup 
 import CountUp from 'react-countup';
 // intersection observer hook 
@@ -33,13 +34,18 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className='flex-1'
           >
-            <h2 className='h2 text-accent'>About me</h2>
-            <h3 className='h3 mb-4'>I'm a Freelancer Front-end Developer with over 5 year of experience.</h3>
+            <h2 className='h2 text-[#F26C42]'>About me</h2>
+            <h3 className='h3 mb-4'>Fullstack Software Developer</h3>
             <p className='mb-6'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nostrum excepturi, consequuntur eius incidunt aliquid sint maxime ipsam voluptatum! Quam.
+              Hi! My name is Nahid Pavel Chowdhury, and I'm passionate about crafting web application using different technologies. I work in both frontend and backend.
+              <br />
+              I'm working in as a Fullstack Software Developer at Vibely Digital. Let's connect and create innovative digital solutions together!
+
+
             </p>
+
             {/* stats  */}
-            <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
+            {/* <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
               <div>
                 <div className='text-[40px] font-tertiary text-gradient mb-2'>
                   {inView ? <CountUp start={0} end={13} duration={3} /> :
@@ -72,12 +78,21 @@ const About = () => {
                   Clients
                 </div>
               </div>
-            </div>
+            </div> */}
+
             <div className='flex gap-x-8 items-center'>
-              <button className='btn btn-lg'>COntact me</button>
-              <a href="#" className='text-gradient btn-link'>
+              <Link
+                to='contact'
+                smooth={true}
+                spy={true}
+                offset={0}
+              >
+                <button className='btn btn-lg'>Contact me</button>
+              </Link>
+
+              {/* <a href="#" className='text-gradient btn-link'>
                 My Portfolio
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>
